@@ -4,6 +4,7 @@ clone_depth: 1
 init:
   - set APPVEYOR_SAVE_CACHE_ON_ERROR=1
   - set PATH=C:\msys64\usr\bin;%PATH%
+  - pushd C:\projects\kalibrate-rtl
 install:
   - bash -lc "pacman --noconfirm --sync --refresh --refresh pacman"
   - bash -lc "pacman --noconfirm --sync --refresh --refresh --sysupgrade --sysupgrade"
