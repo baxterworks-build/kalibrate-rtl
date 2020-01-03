@@ -12,7 +12,7 @@ install:
 
 
 build_script:
-  - bash -lc "pushd C:\\projects\\kalibrate-rtl; ./configure"
+  - pushd c:\projects\kalibrate-rtl; "./configure"
  
  # on_failure:
  
