@@ -7,7 +7,7 @@ init:
   - 
 install:
   - bash -lc "pacman --noconfirm --sync --refresh --refresh pacman"
-  - bash -lc "pacman -Sy mingw-w64-x86_64-fftw"
+  - bash -lc "pacman --noconfirm -Sy mingw-w64-x86_64-fftw"
   #- bash -lc "pacman --noconfirm --sync --refresh --refresh --sysupgrade --sysupgrade"
 
 
