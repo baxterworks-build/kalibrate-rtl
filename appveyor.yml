@@ -14,12 +14,7 @@ install:
 build_script:
   - bash -c "./configure"
  
-branches:
-  only:
-    - appveyor
-
-
-# on_failure:
+ # on_failure:
  
 cache:
   - c:\msys2
