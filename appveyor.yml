@@ -5,6 +5,7 @@ init:
   - set APPVEYOR_SAVE_CACHE_ON_ERROR=1
 
 install:
+  - ls C:\
   - bash -lc "pacman --noconfirm --sync --refresh --refresh pacman"
   - bash -lc "pacman --noconfirm --sync --refresh --refresh --sysupgrade --sysupgrade"
 
