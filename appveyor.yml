@@ -13,7 +13,7 @@ install:
 
 build_script:
   - pushd c:\projects\kalibrate-rtl
-  - bash -lc "pwd"
+  - bash -lc "pushd projects; pushd kalibrate-rtl; ./bootstrap && ./configure"
  
  # on_failure:
  
