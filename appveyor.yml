@@ -13,7 +13,7 @@ install:
 
 build_script:
   - pushd c:\projects\kalibrate-rtl
-  - bash -lc "./bootstrap && ./configure"
+  - bash -lc "bootstrap"
  
  # on_failure:
  
