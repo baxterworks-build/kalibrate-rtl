@@ -1,0 +1,18 @@
+kind: pipeline
+name: default
+
+steps:
+- name: qemu
+  image: voltagex/fedora-mingw64-qemu
+  commands:
+  - dnf --assumeyes mingw64-fftw
+  - ./bootstrap && ./configure --help
+
+#- name: publish  
+#image: plugins/github-release
+#settings:
+#    api_key:
+#      from_secret: github_token
+#    files: output/rtl.tar.gz
+#    when:
+#      event: tag
