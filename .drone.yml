@@ -3,16 +3,15 @@ name: default
 
 steps:
 - name: qemu
-  image: voltagex/fedora-mingw64-qemu
+  image: voltagex/fedora-mingw64-rtlsdr
   commands:
-  - dnf --assumeyes mingw64-fftw
-  - ./bootstrap && ./configure --help
+  - bash drone-build.sh
 
-#- name: publish  
-#image: plugins/github-release
-#settings:
-#    api_key:
-#      from_secret: github_token
-#    files: output/rtl.tar.gz
-#    when:
-#      event: tag
+- name: publish  
+image: plugins/github-release
+settings:
+    api_key:
+      from_secret: github_token
+    files: output/rtl.tar.gz
+    when:
+      event: tag
