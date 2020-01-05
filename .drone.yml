@@ -2,16 +2,16 @@ kind: pipeline
 name: default
 
 steps:
-- name: qemu
-  image: voltagex/fedora-mingw64-rtlsdr
-  commands:
-  - bash drone-build.sh
+  - name: qemu
+    image: voltagex/fedora-mingw64-rtlsdr
+    commands:
+      - bash drone-build.sh
 
-- name: publish  
-image: plugins/github-release
-settings:
-    api_key:
-      from_secret: github_token
-    files: output/rtl.tar.gz
-    when:
-      event: tag
+  - name: publish  
+    image: plugins/github-release
+    settings:
+      api_key:
+        from_secret: github_token
+      files: rtl.tar.gz
+      when:
+        event: tag
