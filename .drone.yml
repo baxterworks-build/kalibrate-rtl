@@ -2,10 +2,10 @@ kind: pipeline
 name: default
 
 steps:
-  - name: qemu
+  - name: kalibrate-build
     image: voltagex/fedora-mingw64-rtlsdr
     commands:
-      - bash drone-build.sh
+      - pushd /drone/src/ && bash drone-build.sh
 
   - name: publish  
     image: plugins/github-release
